@@ -1,7 +1,14 @@
-import 'stylesheets/base'
+// import o from './other'
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Container from 'javascripts/container'
+setTimeout(async function () {
+    var p = await import('./page2')
+    p.default();
+}, 5000)
 
-ReactDOM.render(<Container />, document.querySelector('#main'))
+var div = document.createElement('div')
+
+div.style.height = "100px"
+
+div.className = "test"
+
+document.body.appendChild(div)
