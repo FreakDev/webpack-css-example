@@ -5,11 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
-    "lint": "standard",
-    "test": "standard && webpack --bail"
+    "test": "node_modules/.bin/webpack --env test && node_modules/.bin/mocha build/tests/tests.js",
+    "test:bro": "node_modules/.bin/webpack-dev-server --env debug"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.0.1",
     "babel-core": "^6.9.0",
@@ -18,14 +17,16 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.30.1",
     "mocha": "^5.0.0",
+    "mocha-loader": "^1.1.2",
     "mocha-webpack": "^1.0.1",
     "node-sass": "^4.1.0",
     "postcss-loader": "^2.0.3",
     "sass-loader": "^6.0.3",
-    "standard": "^10.0.2",
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.1.6",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }

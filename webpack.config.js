@@ -2,7 +2,7 @@ const defaultConfig = require( './webpack/config' )
 const fs = require('fs')
 const path = require('path')
 
-const knownEnv = ['dev', 'prod', 'test']
+const knownEnv = ['dev', 'prod', 'test', 'debug']
 
 module.exports = function (env, params) {
 
