@@ -1,27 +1,19 @@
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
-[![npm dependencies status](https://david-dm.org/bensmithett/webpack-css-example.svg)](https://david-dm.org/bensmithett/webpack-css-example)
-[![npm devDependencies status](https://david-dm.org/bensmithett/webpack-css-example/dev-status.svg)](https://david-dm.org/bensmithett/webpack-css-example#info=devDependencies)
-[![Build Status](https://travis-ci.org/bensmithett/webpack-css-example.svg?branch=master)](https://travis-ci.org/bensmithett/webpack-css-example)
-[![Greenkeeper badge](https://badges.greenkeeper.io/bensmithett/webpack-css-example.svg)](https://greenkeeper.io/)
+quick repository to keep (and share with anyone who wants it) this webpack starter kit
 
-# Webpack CSS Example
+integrate babel transpilation of *.js files  
+integrate sass transpilation of *.sass files
 
-Example repo showing how to automatically generate a CSS bundle from explicitly required Sass source with Webpack.
+by default configured to add suffix (hash) to the generated CSS class (to help with unique name when using BEM CSS convention)  
+-> edit this in webpack/css.loader.js file
 
-:sparkles: [**Read the blog post!**](http://bensmithett.com/smarter-css-builds-with-webpack/) :sparkles:
+you may pass an env property on the command line, example :
 
-## Running
+```sh
+$> webpack --env [prod|dev]
+```
 
-- `yarn install` (or `npm install`)
-- `yarn run build` (or `npm run build`)
-- Take a look at the generated CSS in `build/`
+in prod environnment files are minified with uglifyJS, in dev environnment files are transpiled and concateneted (a sourcemap is also generated for each js file)
 
-## Contributing
+all outputs go to build folder
 
-Please adhere to the existing code style. JavaScript that doesn't comply with [standard](http://standardjs.com/) will cause the build to fail.
-
-All issues, pull requests & code contributions must comply with the [Contributor Code of Conduct](./CODE_OF_CONDUCT.md)
-
-## License
-
-Webpack CSS Example is released under the [MIT License](http://ben.mit-license.org/).
+fork from : https://github.com/bensmithett/webpack-css-example
