@@ -5,7 +5,7 @@ const cssLoaders = require('./css.loaders')
 
 const config = {
     entry: {
-      app: ['./src/index'],
+      app: ['babel-polyfill', './src/index'],
       styles: ['./src/stylesheets/other']
     },
   

@@ -6,13 +6,15 @@
   "scripts": {
     "build": "webpack",
     "test": "node_modules/.bin/webpack --env test && node_modules/.bin/mocha build/tests/tests.js",
-    "test:bro": "node_modules/.bin/webpack-dev-server --env debug"
+    "test:bro": "node_modules/.bin/webpack-dev-server --env test.bro",
+    "debug": "node_modules/.bin/webpack-dev-server --env debug"
   },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.0.1",
     "babel-core": "^6.9.0",
     "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
